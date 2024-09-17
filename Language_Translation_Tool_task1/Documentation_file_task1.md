@@ -24,7 +24,7 @@ Before running the script, ensure you have the following Python packages install
 Install the packages using the following command:
 
 ```bash
-pip install transformers tensorflow pillow
+pip install transformers tensorflow pillow torch
 ```
 
 ## Code Summary
