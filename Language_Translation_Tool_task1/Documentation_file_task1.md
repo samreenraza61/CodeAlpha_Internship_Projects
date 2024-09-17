@@ -3,25 +3,25 @@
 
 ## Overview
 
-This project is a GUI-based language translation tool built using Python's `tkinter` library for the graphical user interface, and `transformers` from Hugging Face along with TensorFlow for translation capabilities. The tool allows users to input text in one language and get the translated text in another language. It supports various languages through pre-trained models from Helsinki-NLP's OPUS-MT models.
+This project is a **GUI-based language translation tool** built using Python's `tkinter` library for the graphical user interface, and `transformers` from Hugging Face along with TensorFlow for translation capabilities. The tool allows users to input text in one language and receive the translated text in another. It supports multiple languages through pre-trained models from Helsinki-NLP's OPUS-MT.
 
 ## Features
 
-- **Language Selection:** Users can select the source and target languages from a dropdown menu.
-- **Text Translation:** The tool translates the input text using pre-trained machine translation models.
-- **GUI Components:** The application includes a text input area, a button to trigger translation, and a text area to display the translated text.
-- **User Interaction:** After performing a translation, users are asked if they want to translate another text.
-- **Image Integration:** Additional images are used to enhance the user interface.
+- **Language Selection**: Users can select both the source and target languages from a dropdown menu.
+- **Text Translation**: The tool uses pre-trained machine translation models to translate the input text.
+- **GUI Components**: The application includes a text input area, a translate button, and a text area for displaying the translated output.
+- **User Interaction**: After performing a translation, users can opt to translate another text.
+- **Image Integration**: Additional images are displayed to enhance the UI experience.
 
 ## Requirements
 
-Before running the script, you need to install the following Python packages:
+Before running the script, ensure you have the following Python packages installed:
 
-1. **transformers:** For loading and using pre-trained translation models.
-2. **tensorflow:** Required for running TensorFlow-based models.
-3. **pillow:** For image processing tasks.
+- `transformers`: For loading and using pre-trained translation models.
+- `tensorflow`: Required for handling TensorFlow-based models.
+- `pillow`: For image loading and processing.
 
-Install these packages using the following command:
+Install the packages using the following command:
 
 ```bash
 pip install transformers tensorflow pillow
@@ -31,38 +31,38 @@ pip install transformers tensorflow pillow
 
 ### Libraries Used
 
-- **tkinter:** For creating the graphical user interface (GUI).
-- **ttk:** Provides additional GUI elements such as combo boxes and buttons.
-- **messagebox:** For displaying popup messages and alerts.
-- **transformers:** For handling the translation models and tokenizers.
-- **tensorflow:** For model operations with TensorFlow-based models.
-- **Pillow (PIL):** For image loading, resizing, and displaying.
+- **tkinter**: For creating the graphical user interface (GUI).
+- **ttk**: Provides additional GUI elements such as combo boxes and buttons.
+- **messagebox**: Used for popup messages and alerts.
+- **transformers**: Handles translation models and tokenizers.
+- **tensorflow**: Manages model operations with TensorFlow.
+- **Pillow (PIL)**: For image loading, resizing, and displaying.
 
 ### Key Functions
 
-1. **`translate_text(text, source_lang, target_lang)`**
-   - Loads the pre-trained translation model and tokenizer for the specified language pair.
+1. **`translate_text(text, source_lang, target_lang)`**:
+   - Loads the pre-trained translation model and tokenizer for the selected language pair.
    - Encodes the input text and generates the translated text using the model.
+   
+2. **`perform_translation()`**:
+   - Retrieves the selected source and target languages from the dropdown menus.
+   - Fetches the input text from the text box, performs the translation, and displays the result in the GUI.
+   - Handles errors and prompts the user to translate another text if desired.
 
-2. **`perform_translation()`**
-   - Retrieves the selected source and target languages.
-   - Fetches the input text, performs translation, and displays the result in the GUI.
-   - Handles errors and prompts the user to translate another text.
-
-3. **`ask_to_translate_again()`**
+3. **`ask_to_translate_again()`**:
    - Asks the user if they want to perform another translation and clears the text input if they agree.
 
-4. **`load_image(path, size)`**
+4. **`load_image(path, size)`**:
    - Loads and resizes images for the GUI.
 
 ### GUI Layout
 
-- **Welcome Label:** Displays a welcome message.
-- **Image Integration:** Displays an initial image and additional images for UI enhancement.
-- **Language Selection:** Dropdown menus for selecting source and target languages.
-- **Text Input:** Text box for entering text to be translated.
-- **Translate Button:** Button to initiate the translation process.
-- **Translated Text Output:** Text box to display the translated text.
+- **Welcome Label**: Displays a welcome message.
+- **Image Integration**: Displays an initial image and additional images for UI enhancement.
+- **Language Selection**: Dropdown menus for selecting the source and target languages.
+- **Text Input**: Text box for entering text to be translated.
+- **Translate Button**: Button to initiate the translation process.
+- **Translated Text Output**: Text box to display the translated text.
 
 ## Running the Application
 
@@ -76,7 +76,7 @@ pip install transformers tensorflow pillow
 
 4. The GUI window will open, allowing you to input text, select languages, and view translations.
 
-# References
+## References
 
 This project utilizes the following third-party libraries and models:
 
@@ -94,5 +94,3 @@ This project utilizes the following third-party libraries and models:
 
 - **Helsinki-NLP OPUS-MT Models**: Provides pre-trained models for machine translation tasks.
   - [Model Repository](https://github.com/Helsinki-NLP/opus-mt)
-
-For more details, please refer to the respective links above.
