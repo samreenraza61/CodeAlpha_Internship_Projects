@@ -1,0 +1,2 @@
+# CodeAlpha_Internship_Projects
+Artificial Intelligence Domain
