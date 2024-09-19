@@ -37,16 +37,16 @@ pip install sentence-transformers tensorflow pillow
 
 ### Key Functions
 
-1. **\get_embedding(question)\**:
+1. get_embedding(question):
    - Uses `SentenceTransformer` to convert the user's input question into an embedding for similarity comparison.
    
-2. **\find_closest_faq(embedding)\**:
+2. find_closest_faq(embedding):
    - Computes the cosine similarity between the input question's embedding and a list of pre-defined FAQ embeddings to find the most relevant FAQ.
 
-3. **\respond_to_question()\**:
+3. respond_to_question():
    - Retrieves the user’s question, generates the embedding, finds the closest matching FAQ, and displays the answer in the GUI.
    
-4. **\load_image(path, size)\**:
+4. load_image(path, size):
    - Loads and resizes an image to enhance the UI.
 
 ### GUI Layout
@@ -62,11 +62,7 @@ pip install sentence-transformers tensorflow pillow
 1. Ensure that all required packages are installed.
 2. Save the script in a Python file (e.g., `chatbot.py`).
 3. Run the script using a Python interpreter:
-
-   \`\`\`bash
    python chatbot.py
-   \`\`\`
-
 4. The GUI window will open, allowing users to input questions, submit them, and receive responses.
 
 ## References
